@@ -136,7 +136,12 @@ Page {
                 x: Theme.horizontalPageMargin
                 spacing: Theme.paddingLarge
                 visible: page.repo
-                Label { text: "★ " + (page.repo ? page.repo.stargazers_count : 0); color: page.starred ? Settings.accent : Theme.secondaryColor; font.pixelSize: Theme.fontSizeSmall }
+                StateBadge {
+                    anchors.verticalCenter: parent.verticalCenter
+                    text: page.repo && page.repo["private"] ? qsTr("Private") : qsTr("Public")
+                    hue: page.repo && page.repo["private"] ? Settings.closedColor : Settings.openColor
+                }
+                Label { text: "★ " + (page.repo ? page.repo.stargazers_count : 0); color: page.starred ? Settings.accent : Theme.secondaryColor; font.pixelSize: Theme.fontSizeSmall; anchors.verticalCenter: parent.verticalCenter }
                 Label { text: "⑂ " + (page.repo ? page.repo.forks_count : 0); color: Theme.secondaryColor; font.pixelSize: Theme.fontSizeSmall }
                 Label { visible: page.repo && page.repo.language; text: page.repo ? page.repo.language : ""; color: Theme.secondaryColor; font.pixelSize: Theme.fontSizeSmall }
             }

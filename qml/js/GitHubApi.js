@@ -40,13 +40,23 @@ function nextLink(linkHeader) {
 //   meta = { status, link, next, xhr }
 function request(method, path, token, body, cb) {
     var xhr = new XMLHttpRequest();
-    xhr.open(method, _resolve(path));
-    xhr.setRequestHeader("Accept", "application/vnd.github+json");
-    xhr.setRequestHeader("X-GitHub-Api-Version", "2022-11-28");
-    if (token)
-        xhr.setRequestHeader("Authorization", "token " + token);
-    if (body !== undefined && body !== null)
-        xhr.setRequestHeader("Content-Type", "application/json");
+    // Qt 5.6's QML XMLHttpRequest rejects PATCH (open() throws), so tunnel
+    // PATCH through POST + X-HTTP-Method-Override, which GitHub honours.
+    var httpMethod = (method === "PATCH") ? "POST" : method;
+    try {
+        xhr.open(httpMethod, _resolve(path));
+        xhr.setRequestHeader("Accept", "application/vnd.github+json");
+        xhr.setRequestHeader("X-GitHub-Api-Version", "2022-11-28");
+        if (method === "PATCH")
+            xhr.setRequestHeader("X-HTTP-Method-Override", "PATCH");
+        if (token)
+            xhr.setRequestHeader("Authorization", "token " + token);
+        if (body !== undefined && body !== null)
+            xhr.setRequestHeader("Content-Type", "application/json");
+    } catch (e) {
+        cb({ status: 0, message: "" + e, data: null }, null, { status: 0 });
+        return xhr;
+    }
 
     xhr.onreadystatechange = function() {
         if (xhr.readyState !== 4)

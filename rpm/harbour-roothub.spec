@@ -12,7 +12,7 @@ Name:       harbour-roothub
 %define __requires_exclude ^lib.*$
 
 Summary:    RooThub is a native GitHub client for Sailfish OS
-Version:    0.4.0
+Version:    0.5.0
 Release:    1
 Group:      Qt/Qt
 License:    GPL-3.0

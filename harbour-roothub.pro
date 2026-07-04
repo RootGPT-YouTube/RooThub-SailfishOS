@@ -11,7 +11,7 @@ TARGET = harbour-roothub
 # Single source of truth for the version. Exposed to QML as the
 # `appVersion` context property (see src/harbour-roothub.cpp) and read
 # by AboutPage.
-RH_APP_VERSION = 0.4.0
+RH_APP_VERSION = 0.5.0
 VERSION = $$RH_APP_VERSION
 DEFINES += APP_VERSION=\\\"$$RH_APP_VERSION\\\"
 

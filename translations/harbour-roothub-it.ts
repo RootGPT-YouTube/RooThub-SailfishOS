@@ -711,31 +711,31 @@
     </message>
     <message>
         <location filename="../qml/pages/RepoPage.qml" line="103"/>
-        <location filename="../qml/pages/RepoPage.qml" line="157"/>
+        <location filename="../qml/pages/RepoPage.qml" line="162"/>
         <source>Watch</source>
         <translation>Segui</translation>
     </message>
     <message>
         <location filename="../qml/pages/RepoPage.qml" line="104"/>
-        <location filename="../qml/pages/RepoPage.qml" line="150"/>
+        <location filename="../qml/pages/RepoPage.qml" line="155"/>
         <source>Unstar</source>
         <translation>Rimuovi stella</translation>
     </message>
     <message>
         <location filename="../qml/pages/RepoPage.qml" line="104"/>
-        <location filename="../qml/pages/RepoPage.qml" line="150"/>
+        <location filename="../qml/pages/RepoPage.qml" line="155"/>
         <source>Star</source>
         <translation>Aggiungi stella</translation>
     </message>
     <message>
         <location filename="../qml/pages/RepoPage.qml" line="107"/>
-        <location filename="../qml/pages/RepoPage.qml" line="181"/>
+        <location filename="../qml/pages/RepoPage.qml" line="186"/>
         <source>Make public</source>
         <translation>Rendi pubblico</translation>
     </message>
     <message>
         <location filename="../qml/pages/RepoPage.qml" line="107"/>
-        <location filename="../qml/pages/RepoPage.qml" line="181"/>
+        <location filename="../qml/pages/RepoPage.qml" line="186"/>
         <source>Make private</source>
         <translation>Rendi privato</translation>
     </message>
@@ -745,69 +745,79 @@
         <translation>Aggiorna</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="157"/>
+        <location filename="../qml/pages/RepoPage.qml" line="141"/>
+        <source>Private</source>
+        <translation>Privato</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RepoPage.qml" line="141"/>
+        <source>Public</source>
+        <translation>Pubblico</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RepoPage.qml" line="162"/>
         <source>Watching</source>
         <translation>Seguito</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="176"/>
+        <location filename="../qml/pages/RepoPage.qml" line="181"/>
         <source>Manage</source>
         <translation>Gestione</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="189"/>
+        <location filename="../qml/pages/RepoPage.qml" line="194"/>
         <source>Delete repository</source>
         <translation>Elimina repository</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="192"/>
+        <location filename="../qml/pages/RepoPage.qml" line="197"/>
         <source>Deleting repository</source>
         <translation>Eliminazione repository</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="197"/>
+        <location filename="../qml/pages/RepoPage.qml" line="202"/>
         <source>Code</source>
         <translation>Codice</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="198"/>
+        <location filename="../qml/pages/RepoPage.qml" line="203"/>
         <source>Browse the %1 branch</source>
         <translation>Sfoglia il branch %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="198"/>
+        <location filename="../qml/pages/RepoPage.qml" line="203"/>
         <source>Browse files</source>
         <translation>Sfoglia i file</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="203"/>
-        <location filename="../qml/pages/RepoPage.qml" line="206"/>
+        <location filename="../qml/pages/RepoPage.qml" line="208"/>
+        <location filename="../qml/pages/RepoPage.qml" line="211"/>
         <source>Issues</source>
         <translation>Issue</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="204"/>
+        <location filename="../qml/pages/RepoPage.qml" line="209"/>
         <source>%1 open</source>
         <translation>%1 aperte</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="209"/>
-        <location filename="../qml/pages/RepoPage.qml" line="211"/>
+        <location filename="../qml/pages/RepoPage.qml" line="214"/>
+        <location filename="../qml/pages/RepoPage.qml" line="216"/>
         <source>Pull requests</source>
         <translation>Pull request</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="214"/>
+        <location filename="../qml/pages/RepoPage.qml" line="219"/>
         <source>Owner</source>
         <translation>Proprietario</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="219"/>
+        <location filename="../qml/pages/RepoPage.qml" line="224"/>
         <source>README</source>
         <translation>README</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="234"/>
+        <location filename="../qml/pages/RepoPage.qml" line="239"/>
         <source>No README</source>
         <translation>Nessun README</translation>
     </message>
