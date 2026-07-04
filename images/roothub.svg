@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <!-- Sfondo: gradiente radiale scuro, quasi nero con centro blu notte -->
+    <radialGradient id="bg" cx="50%" cy="45%" r="55%">
+      <stop offset="0%"   stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#020810"/>
+    </radialGradient>
+
+    <!-- Alone esterno del cerchio: glow ciano -->
+    <radialGradient id="ringGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="75%"  stop-color="#00e5ff" stop-opacity="0"/>
+      <stop offset="90%"  stop-color="#00e5ff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Gradiente lettere: ciano elettrico → bianco freddo -->
+    <linearGradient id="letterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#e0faff"/>
+      <stop offset="40%"  stop-color="#7de8ff"/>
+      <stop offset="100%" stop-color="#00b4d8"/>
+    </linearGradient>
+
+    <!-- Gradiente ombra -->
+    <linearGradient id="shadowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#003d59" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#003d59" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Glow filtro per linee circuito -->
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Glow forte per le lettere -->
+    <filter id="letterGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Glow sottile per circuiti -->
+    <filter id="circuitGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Maschera cerchio per clip -->
+    <clipPath id="circleClip">
+      <circle cx="128" cy="128" r="118"/>
+    </clipPath>
+  </defs>
+
+  <!-- ── Sfondo cerchio principale ── -->
+  <circle cx="128" cy="128" r="122" fill="url(#bg)"/>
+
+  <!-- ── Alone glow esterno ── -->
+  <circle cx="128" cy="128" r="125" fill="url(#ringGlow)"/>
+
+  <!-- ── Bordo cerchio: doppio anello ciano con effetto energia ── -->
+  <circle cx="128" cy="128" r="118"
+          fill="none" stroke="#00e5ff" stroke-width="1.2" opacity="0.9"
+          filter="url(#neonGlow)"/>
+  <circle cx="128" cy="128" r="121"
+          fill="none" stroke="#00b4d8" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- ── Circuiti di sfondo (dentro il cerchio) ── -->
+  <g clip-path="url(#circleClip)" stroke="#00b4d8" stroke-width="0.6" opacity="0.28" fill="none">
+    <line x1="20"  y1="80"  x2="236" y2="80"/>
+    <line x1="20"  y1="176" x2="236" y2="176"/>
+    <line x1="80"  y1="20"  x2="80"  y2="236"/>
+    <line x1="176" y1="20"  x2="176" y2="236"/>
+    <line x1="20"  y1="128" x2="128" y2="20"  stroke-dasharray="4,6"/>
+    <line x1="128" y1="236" x2="236" y2="128" stroke-dasharray="4,6"/>
+    <circle cx="80"  cy="80"  r="3" fill="#00e5ff"/>
+    <circle cx="176" cy="80"  r="3" fill="#00e5ff"/>
+    <circle cx="80"  cy="176" r="3" fill="#00e5ff"/>
+    <circle cx="176" cy="176" r="3" fill="#00e5ff"/>
+    <circle cx="128" cy="80"  r="2" fill="#00b4d8"/>
+    <circle cx="128" cy="176" r="2" fill="#00b4d8"/>
+    <circle cx="80"  cy="128" r="2" fill="#00b4d8"/>
+    <circle cx="176" cy="128" r="2" fill="#00b4d8"/>
+  </g>
+
+  <!-- ── Scanner line olografica ── -->
+  <rect x="10" y="122" width="236" height="12" rx="1"
+        fill="url(#shadowGrad)" clip-path="url(#circleClip)" opacity="0.35"/>
+
+  <!-- ══════════════════════════════════════════
+       LETTERE RH CON CIRCUITI ELETTRICI
+       R: xmin=62, H: xmin=150, entrambe alte ~90px centrate verticalmente
+       ══════════════════════════════════════════ -->
+  <g filter="url(#letterGlow)">
+
+    <!-- ─── LETTERA R ─── -->
+    <rect x="62" y="83" width="11" height="90" rx="2" fill="url(#letterGrad)"/>
+    <rect x="62" y="83" width="52" height="11" rx="2" fill="url(#letterGrad)"/>
+    <rect x="103" y="83" width="11" height="46" rx="2" fill="url(#letterGrad)"/>
+    <rect x="62" y="118" width="52" height="11" rx="2" fill="url(#letterGrad)"/>
+    <polygon points="103,129 114,129 136,173 125,173" fill="url(#letterGrad)"/>
+
+    <!-- ─── LETTERA H ─── -->
+    <rect x="150" y="83" width="11" height="90" rx="2" fill="url(#letterGrad)"/>
+    <rect x="187" y="83" width="11" height="90" rx="2" fill="url(#letterGrad)"/>
+    <rect x="150" y="123" width="48" height="11" rx="2" fill="url(#letterGrad)"/>
+
+  </g>
+
+  <!-- ══════════════════════════════════════════
+       CIRCUITI CHE "ATTRAVERSANO" LE LETTERE RH
+       ══════════════════════════════════════════ -->
+  <g filter="url(#circuitGlow)" stroke="#00e5ff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Circuito dal top della R, va a sinistra e scende -->
+    <polyline points="67,83 67,72 52,72 52,58 40,58" stroke-width="1.2" opacity="0.9"/>
+    <circle cx="52" cy="72" r="2.2" fill="#00e5ff" stroke="none"/>
+    <circle cx="40" cy="58" r="3" fill="none" stroke="#00e5ff" stroke-width="1.2"/>
+    <circle cx="40" cy="58" r="1.2" fill="#7de8ff" stroke="none"/>
+
+    <!-- Circuito sul fianco destro della R che esce in alto a destra -->
+    <polyline points="108,88 108,72 128,72 128,58 148,58" stroke-width="1.2" opacity="0.9"/>
+    <circle cx="128" cy="72" r="2.2" fill="#00e5ff" stroke="none"/>
+    <circle cx="148" cy="58" r="3" fill="none" stroke="#00e5ff" stroke-width="1.2"/>
+    <circle cx="148" cy="58" r="1.2" fill="#7de8ff" stroke="none"/>
+
+    <!-- Circuito traversa centrale R che esce a destra -->
+    <polyline points="114,123 128,123 128,138 148,138" stroke-width="1.2" opacity="0.85"/>
+    <circle cx="128" cy="123" r="2.2" fill="#00e5ff" stroke="none"/>
+    <circle cx="148" cy="138" r="2.5" fill="none" stroke="#00e5ff" stroke-width="1.2"/>
+    <circle cx="148" cy="138" r="1" fill="#7de8ff" stroke="none"/>
+
+    <!-- Circuito gamba diagonale R che scende in basso a sinistra -->
+    <polyline points="120,168 108,168 108,183 88,183 88,198" stroke-width="1.2" opacity="0.85"/>
+    <circle cx="108" cy="183" r="2.2" fill="#00e5ff" stroke="none"/>
+    <rect x="85" y="195" width="6" height="6" rx="1" fill="#00e5ff" stroke="none" opacity="0.9"/>
+
+    <!-- Circuito dal top gamba sinistra H, esce in alto -->
+    <polyline points="155,88 155,72 170,72 170,58" stroke-width="1.2" opacity="0.9"/>
+    <circle cx="155" cy="72" r="2.2" fill="#00e5ff" stroke="none"/>
+    <circle cx="170" cy="58" r="3" fill="none" stroke="#00e5ff" stroke-width="1.2"/>
+    <circle cx="170" cy="58" r="1.2" fill="#7de8ff" stroke="none"/>
+
+    <!-- Circuito dal top gamba destra H, esce in alto a destra -->
+    <polyline points="192,88 192,72 208,72 208,58 216,58" stroke-width="1.2" opacity="0.9"/>
+    <circle cx="208" cy="72" r="2.2" fill="#00e5ff" stroke="none"/>
+    <circle cx="216" cy="58" r="3" fill="none" stroke="#00e5ff" stroke-width="1.2"/>
+    <circle cx="216" cy="58" r="1.2" fill="#7de8ff" stroke="none"/>
+
+    <!-- Circuito dalla traversa H che esce a destra -->
+    <polyline points="198,128 214,128 214,143 226,143" stroke-width="1.2" opacity="0.85"/>
+    <circle cx="214" cy="128" r="2.2" fill="#00e5ff" stroke="none"/>
+    <circle cx="226" cy="143" r="2.5" fill="none" stroke="#00e5ff" stroke-width="1.2"/>
+
+    <!-- Circuito gamba destra H che scende a destra -->
+    <polyline points="192,168 192,183 208,183 208,198" stroke-width="1.2" opacity="0.85"/>
+    <circle cx="208" cy="183" r="2.2" fill="#00e5ff" stroke="none"/>
+    <rect x="205" y="195" width="6" height="6" rx="1" fill="#00e5ff" stroke="none" opacity="0.9"/>
+
+    <!-- Circuito gamba sinistra H che scende a sinistra -->
+    <polyline points="155,168 155,183 140,183 140,198" stroke-width="1.2" opacity="0.75"/>
+    <circle cx="140" cy="183" r="2.2" fill="#00e5ff" stroke="none"/>
+    <circle cx="140" cy="198" r="2" fill="#00b4d8" stroke="none" opacity="0.8"/>
+
+    <!-- Piccoli nodi puntiformi -->
+    <circle cx="67" cy="123" r="2" fill="#7de8ff" stroke="none" opacity="0.8"/>
+    <circle cx="187" cy="128" r="2" fill="#7de8ff" stroke="none" opacity="0.8"/>
+
+  </g>
+
+  <!-- ── Pixel/spark decorativi angolo basso-destra ── -->
+  <g filter="url(#neonGlow)" opacity="0.7">
+    <rect x="185" y="175" width="4" height="4" rx="0.5" fill="#00e5ff"/>
+    <rect x="193" y="168" width="3" height="3" rx="0.5" fill="#00b4d8"/>
+    <rect x="190" y="180" width="2" height="2" rx="0.5" fill="#7de8ff"/>
+  </g>
+
+  <!-- ── Spark angolo alto-sinistra ── -->
+  <g filter="url(#neonGlow)" opacity="0.5">
+    <rect x="66"  y="40"  width="3" height="3" rx="0.5" fill="#00e5ff"/>
+    <rect x="72"  y="34"  width="2" height="2" rx="0.5" fill="#7de8ff"/>
+    <rect x="60"  y="46"  width="2" height="2" rx="0.5" fill="#00b4d8"/>
+  </g>
+
+  <!-- ══════════════════════════════════════════
+       ACCENTO GIT-BRANCH in basso (richiama GitHub):
+       due commit su un ramo che biforca, in ciano neon
+       ══════════════════════════════════════════ -->
+  <g filter="url(#neonGlow)" stroke="#00e5ff" stroke-width="2" fill="none" stroke-linecap="round">
+    <!-- ramo principale (orizzontale) -->
+    <path d="M 96,200 H 160"/>
+    <!-- biforcazione verso il basso -->
+    <path d="M 128,200 q 0,10 14,14"/>
+    <!-- commit nodi -->
+    <circle cx="96"  cy="200" r="4.5" fill="#020810" stroke="#00e5ff" stroke-width="2.4"/>
+    <circle cx="160" cy="200" r="4.5" fill="#020810" stroke="#00e5ff" stroke-width="2.4"/>
+    <circle cx="146" cy="216" r="4"   fill="#020810" stroke="#00b4d8" stroke-width="2.2"/>
+  </g>
+
+  <!-- ── Bordo finale: micro-dash tratteggiato futuristico ── -->
+  <circle cx="128" cy="128" r="115"
+          fill="none" stroke="#00e5ff" stroke-width="0.6"
+          stroke-dasharray="3,18" opacity="0.3"/>
+</svg>

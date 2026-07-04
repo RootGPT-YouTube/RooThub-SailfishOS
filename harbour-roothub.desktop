@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=harbour-roothub
+Exec=harbour-roothub
+Name=RooThub
+Name[it]=RooThub
+
+[X-Sailjail]
+Permissions=Internet;UserDirs;Downloads;Pictures;Documents;RemovableMedia
+OrganizationName=harbour-roothub
+ApplicationName=harbour-roothub

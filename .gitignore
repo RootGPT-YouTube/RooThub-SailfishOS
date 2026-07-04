@@ -1,0 +1,19 @@
+# --- sfdk in-source build artifacts ---
+*.o
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+Makefile
+.qmake.stash
+harbour-roothub
+*.so
+installroot/
+documentation.list
+.sfdk/
+
+# --- packaged output ---
+RPMS/
+
+# --- i18n build products / auto-generated template ---
+*.qm
+translations/harbour-roothub.ts
