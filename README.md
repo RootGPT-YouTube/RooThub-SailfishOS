@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/roothub.svg" width="140" alt="RooThub icon">
+  <img src="icons/256x256/harbour-roothub.png" width="140" alt="RooThub icon">
 </p>
 
 <h1 align="center">RooThub</h1>
