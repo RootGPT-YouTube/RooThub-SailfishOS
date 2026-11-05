@@ -17,3 +17,6 @@ RPMS/
 # --- i18n build products / auto-generated template ---
 *.qm
 translations/harbour-roothub.ts
+
+# --- local mirror of Claude notes: never published ---
+memory/
