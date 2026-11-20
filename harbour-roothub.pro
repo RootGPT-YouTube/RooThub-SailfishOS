@@ -11,7 +11,7 @@ TARGET = harbour-roothub
 # Single source of truth for the version. Exposed to QML as the
 # `appVersion` context property (see src/harbour-roothub.cpp) and read
 # by AboutPage.
-RH_APP_VERSION = 0.6.0
+RH_APP_VERSION = 0.7.0
 VERSION = $$RH_APP_VERSION
 DEFINES += APP_VERSION=\\\"$$RH_APP_VERSION\\\"
 
@@ -21,7 +21,11 @@ CONFIG += sailfishapp sailfishapp_i18n c++17
 # phone language and falls back to the source (English) strings otherwise.
 TRANSLATIONS += translations/harbour-roothub-it.ts
 
-SOURCES += src/harbour-roothub.cpp
+QT += network
+
+SOURCES += src/harbour-roothub.cpp \
+    src/downloader.cpp
+HEADERS += src/downloader.h
 
 DISTFILES += \
     qml/harbour-roothub.qml \
@@ -30,6 +34,8 @@ DISTFILES += \
     qml/cover/CoverPage.qml \
     qml/js/GitHubApi.js \
     qml/js/Format.js \
+    qml/js/Html.js \
+    qml/js/Router.js \
     qml/components/CircuitBackground.qml \
     qml/components/NeonHeader.qml \
     qml/components/NeonButton.qml \
@@ -44,6 +50,9 @@ DISTFILES += \
     qml/components/NotificationDelegate.qml \
     qml/components/CommentItem.qml \
     qml/components/MarkdownText.qml \
+    qml/components/StatCell.qml \
+    qml/components/DownloadBar.qml \
+    qml/components/WebHtmlView.qml \
     qml/pages/LoginPage.qml \
     qml/pages/DeviceFlowPage.qml \
     qml/pages/HomePage.qml \
@@ -61,6 +70,10 @@ DISTFILES += \
     qml/pages/UserPage.qml \
     qml/pages/SettingsPage.qml \
     qml/pages/AboutPage.qml \
+    qml/pages/HtmlPage.qml \
+    qml/pages/ReleasesPage.qml \
+    qml/pages/CommitsPage.qml \
+    qml/pages/RefsPage.qml \
     rpm/harbour-roothub.spec \
     rpm/harbour-roothub.yaml \
     harbour-roothub.desktop

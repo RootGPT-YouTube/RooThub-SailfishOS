@@ -91,12 +91,41 @@ function request(method, path, token, body, cb) {
 // qsTr is not available inside a `.pragma library`; keep messages plain.
 function qsTrId_fallback(s) { return s; }
 
+// Page count from a Link header: the "last" page number, or null when the
+// response fits in a single page. With per_page=1 this is the item count.
+function lastPage(linkHeader) {
+    if (!linkHeader)
+        return null;
+    var m = linkHeader.match(/[?&]page=(\d+)[^>]*>;\s*rel="last"/);
+    return m ? parseInt(m[1], 10) : null;
+}
+
+// Number of items in a list endpoint, using the per_page=1 + Link trick.
+// cb(count) — count is -1 on error.
+function count(path, token, cb) {
+    var sep = path.indexOf("?") === -1 ? "?" : "&";
+    return request("GET", path + sep + "per_page=1", token, null, function(err, data, meta) {
+        if (err) { cb(-1); return; }
+        var n = lastPage(meta.link);
+        cb(n !== null ? n : ((data instanceof Array) ? data.length : 0));
+    });
+}
+
 // GET returning the raw resource (e.g. a README or file blob) as text.
 // cb(err, text, meta)
 function getRaw(path, token, cb) {
+    return getAs(path, token, "application/vnd.github.raw", cb);
+}
+
+// GET a README / markdown file already rendered to HTML by GitHub.
+function getHtml(path, token, cb) {
+    return getAs(path, token, "application/vnd.github.html", cb);
+}
+
+function getAs(path, token, accept, cb) {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", _resolve(path));
-    xhr.setRequestHeader("Accept", "application/vnd.github.raw");
+    xhr.setRequestHeader("Accept", accept);
     xhr.setRequestHeader("X-GitHub-Api-Version", "2022-11-28");
     if (token)
         xhr.setRequestHeader("Authorization", "token " + token);

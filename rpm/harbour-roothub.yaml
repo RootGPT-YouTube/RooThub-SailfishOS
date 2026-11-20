@@ -1,6 +1,6 @@
 Name: harbour-roothub
 Summary: RooThub is a native GitHub client for Sailfish OS
-Version: 0.6.0
+Version: 0.7.0
 Release: 1
 Group: Qt/Qt
 URL: https://github.com/RootGPT-YouTube/RooThub-SailfishOS
@@ -24,6 +24,8 @@ PkgConfigBR:
 Requires:
   - sailfishsilica-qt5 >= 0.10.9
   - nemo-qml-plugin-configuration-qt5
+  - sailfish-components-webview-qt5
+  - nemo-qml-plugin-notifications-qt5
 
 Files:
   - '%{_bindir}/%{name}'

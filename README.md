@@ -24,8 +24,11 @@ circuit look (and a plain Silica theme if you prefer).
 
 | Area | What you can do |
 |------|-----------------|
-| **Repositories** | Yours, starred, by user, or via search; overview with README, ★ star / 👁 watch, **make public/private**, and **delete** (admin) |
-| **Code** | Browse the file tree, view files and images, and **edit + commit** files with a built‑in editor (Contents API) |
+| **Repositories** | Yours, starred, by user, or via search; overview with owner, topics, website, license, stats, ★ star / 👁 watch, **make public/private**, and **delete** (admin) |
+| **README** | Rendered **like on github.com** (images, badges, tables, highlighted code, alerts) by the system web engine — one swipe left from the repository |
+| **Releases** | Release list with *Latest* / *Pre‑release* badges, release notes, assets with size and download count, and **in‑app downloads** to `~/Downloads` with progress and a notification |
+| **History** | Commits with their **coloured diffs**, branches, tags and contributors |
+| **Code** | Browse the file tree (any branch or tag), view files and images, Markdown files rendered, and **edit + commit** files with a built‑in editor (Contents API) |
 | **Issues** | List / filter (open·closed·all), read, comment, close/reopen, and open new issues |
 | **Pull requests** | List, read, comment, close/reopen, and **merge** |
 | **Notifications** | Inbox with unread markers; open threads, mark read / mark all read |
@@ -51,7 +54,7 @@ The token is stored locally on the device (dconf) and sent only to `api.github.c
 
 ## Building
 
-RooThub is a **pure‑QML** harbour app (a minimal C++ launcher). It builds with the
+RooThub is a QML harbour app with a small C++ part (launcher and file downloader). It builds with the
 Sailfish SDK (`sfdk`). ⚠️ `sfdk build` builds **in‑source**, so clean between
 architectures:
 
@@ -79,6 +82,7 @@ emulator is `i486`.)
 ## Tested on
 
 - Sony Xperia 10 III — Sailfish OS 5.1.0.11
+- POCO M4 Pro 4G — Sailfish OS 5.2 (community port)
 - Jolla C2 — Sailfish OS 5.1.0.11
 
 ## Notes

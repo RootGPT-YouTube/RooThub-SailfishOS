@@ -25,15 +25,20 @@
 #include <QtQml>
 #include <sailfishapp.h>
 
+#include "downloader.h"
+
 int main(int argc, char *argv[])
 {
     QScopedPointer<QGuiApplication> app(SailfishApp::application(argc, argv));
     app->setApplicationName(QStringLiteral("harbour-roothub"));
     app->setOrganizationName(QStringLiteral("harbour-roothub"));
 
+    // Declared before the view so it outlives the QML that binds to it.
+    Downloader downloader;
     QScopedPointer<QQuickView> view(SailfishApp::createView());
     view->rootContext()->setContextProperty(QStringLiteral("appVersion"),
                                              QStringLiteral(APP_VERSION));
+    view->rootContext()->setContextProperty(QStringLiteral("downloader"), &downloader);
     view->setSource(SailfishApp::pathToMainQml());
     view->show();
 

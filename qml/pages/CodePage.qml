@@ -90,10 +90,21 @@ Page {
                 if (model.entry.type === "dir")
                     pageStack.push(Qt.resolvedUrl("CodePage.qml"),
                         { fullName: page.fullName, path: model.entry.path, branch: page.branch })
-                else
-                    pageStack.push(Qt.resolvedUrl("FilePage.qml"),
-                        { fullName: page.fullName, path: model.entry.path, branch: page.branch,
-                          fileName: model.entry.name, downloadUrl: model.entry.download_url })
+                else {
+                    var fileProps = { fullName: page.fullName, path: model.entry.path, branch: page.branch,
+                                      fileName: model.entry.name, downloadUrl: model.entry.download_url }
+                    // Markdown opens rendered like on GitHub; the source is one tap away.
+                    if (/\.(md|markdown|mdown)$/i.test(model.entry.name))
+                        pageStack.push(Qt.resolvedUrl("HtmlPage.qml"), {
+                            kind: "markdown", fullName: page.fullName, ref: page.branch,
+                            docPath: model.entry.path, title: model.entry.name, description: page.fullName,
+                            apiPath: "/repos/" + page.fullName + "/contents/" + model.entry.path
+                                     + (page.branch ? "?ref=" + encodeURIComponent(page.branch) : ""),
+                            webUrl: "https://github.com/" + page.fullName + "/blob/" + page.branch + "/" + model.entry.path,
+                            sourceProps: fileProps })
+                    else
+                        pageStack.push(Qt.resolvedUrl("FilePage.qml"), fileProps)
+                }
             }
         }
 

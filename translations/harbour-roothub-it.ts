@@ -47,14 +47,37 @@
         <translation>Aggiorna</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CodePage.qml" line="102"/>
+        <location filename="../qml/pages/CodePage.qml" line="113"/>
         <source>Error</source>
         <translation>Errore</translation>
     </message>
     <message>
-        <location filename="../qml/pages/CodePage.qml" line="102"/>
+        <location filename="../qml/pages/CodePage.qml" line="113"/>
         <source>Empty</source>
         <translation>Vuoto</translation>
+    </message>
+</context>
+<context>
+    <name>CommitsPage</name>
+    <message>
+        <location filename="../qml/pages/CommitsPage.qml" line="49"/>
+        <source>Commits</source>
+        <translation>Commit</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/CommitsPage.qml" line="52"/>
+        <source>Refresh</source>
+        <translation>Aggiorna</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/CommitsPage.qml" line="110"/>
+        <source>Error</source>
+        <translation>Errore</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/CommitsPage.qml" line="110"/>
+        <source>Nothing here</source>
+        <translation>Niente qui</translation>
     </message>
 </context>
 <context>
@@ -117,6 +140,46 @@
         <location filename="../qml/pages/DeviceFlowPage.qml" line="149"/>
         <source>Retry</source>
         <translation>Riprova</translation>
+    </message>
+</context>
+<context>
+    <name>DownloadBar</name>
+    <message>
+        <location filename="../qml/components/DownloadBar.qml" line="27"/>
+        <source>Download failed: %1</source>
+        <translation>Download non riuscito: %1</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/DownloadBar.qml" line="33"/>
+        <source>Cancelling download</source>
+        <translation>Annullo il download</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/DownloadBar.qml" line="60"/>
+        <source>Downloading %1</source>
+        <translation>Download di %1</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/DownloadBar.qml" line="61"/>
+        <source>Saved to Downloads: %1</source>
+        <translation>Salvato in Download: %1</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/components/DownloadBar.qml" line="71"/>
+        <source>%n more queued</source>
+        <translation>
+            <numerusform>ancora %n in coda</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../qml/components/DownloadBar.qml" line="72"/>
+        <source>tap to cancel</source>
+        <translation>tocca per annullare</translation>
+    </message>
+    <message>
+        <location filename="../qml/components/DownloadBar.qml" line="73"/>
+        <source>Tap to open</source>
+        <translation>Tocca per aprire</translation>
     </message>
 </context>
 <context>
@@ -296,6 +359,69 @@
         <location filename="../qml/pages/HomePage.qml" line="131"/>
         <source>Repos, code, issues, users</source>
         <translation>Repository, codice, issue, utenti</translation>
+    </message>
+</context>
+<context>
+    <name>HtmlPage</name>
+    <message>
+        <location filename="../qml/pages/HtmlPage.qml" line="56"/>
+        <source>Nothing to show</source>
+        <translation>Niente da mostrare</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/HtmlPage.qml" line="71"/>
+        <source>Latest</source>
+        <translation>Più recente</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/HtmlPage.qml" line="71"/>
+        <source>Pre-release</source>
+        <translation>Pre-release</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/HtmlPage.qml" line="71"/>
+        <source>Draft</source>
+        <translation>Bozza</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/HtmlPage.qml" line="72"/>
+        <source>Assets</source>
+        <translation>Allegati</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/HtmlPage.qml" line="72"/>
+        <source>%1 downloads</source>
+        <translation>%1 download</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/HtmlPage.qml" line="73"/>
+        <source>Source code (zip)</source>
+        <translation>Codice sorgente (zip)</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/HtmlPage.qml" line="73"/>
+        <source>Source code (tar.gz)</source>
+        <translation>Codice sorgente (tar.gz)</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/HtmlPage.qml" line="74"/>
+        <source>No release notes.</source>
+        <translation>Nessuna nota di rilascio.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/HtmlPage.qml" line="86"/>
+        <source>%1 files changed</source>
+        <translation>%1 file modificati</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/HtmlPage.qml" line="86"/>
+        <source>Binary or very large file: no diff shown.</source>
+        <translation>File binario o troppo grande: diff non mostrato.</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/HtmlPage.qml" line="140"/>
+        <source>Open on GitHub</source>
+        <translation>Apri su GitHub</translation>
     </message>
 </context>
 <context>
@@ -647,6 +773,116 @@
     </message>
 </context>
 <context>
+    <name>RefsPage</name>
+    <message>
+        <location filename="../qml/pages/RefsPage.qml" line="56"/>
+        <source>Tags</source>
+        <translation>Tag</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RefsPage.qml" line="57"/>
+        <source>Contributors</source>
+        <translation>Contributori</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RefsPage.qml" line="57"/>
+        <source>Branches</source>
+        <translation>Branch</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RefsPage.qml" line="62"/>
+        <source>Refresh</source>
+        <translation>Aggiorna</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/pages/RefsPage.qml" line="102"/>
+        <source>%n contribution(s)</source>
+        <translation>
+            <numerusform>%n contributo</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RefsPage.qml" line="114"/>
+        <source>default</source>
+        <translation>predefinito</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RefsPage.qml" line="118"/>
+        <source>protected</source>
+        <translation>protetto</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RefsPage.qml" line="128"/>
+        <source>Commits</source>
+        <translation>Commit</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RefsPage.qml" line="134"/>
+        <source>Release</source>
+        <translation>Release</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RefsPage.qml" line="160"/>
+        <source>Error</source>
+        <translation>Errore</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RefsPage.qml" line="160"/>
+        <source>Nothing here</source>
+        <translation>Niente qui</translation>
+    </message>
+</context>
+<context>
+    <name>ReleasesPage</name>
+    <message>
+        <location filename="../qml/pages/ReleasesPage.qml" line="52"/>
+        <source>Releases</source>
+        <translation>Release</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ReleasesPage.qml" line="55"/>
+        <source>Open on GitHub</source>
+        <translation>Apri su GitHub</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ReleasesPage.qml" line="56"/>
+        <source>Refresh</source>
+        <translation>Aggiorna</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ReleasesPage.qml" line="84"/>
+        <source>Latest</source>
+        <translation>Più recente</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ReleasesPage.qml" line="85"/>
+        <source>Pre-release</source>
+        <translation>Pre-release</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ReleasesPage.qml" line="86"/>
+        <source>Draft</source>
+        <translation>Bozza</translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../qml/pages/ReleasesPage.qml" line="95"/>
+        <source>%n asset(s)</source>
+        <translation>
+            <numerusform>%n allegato</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ReleasesPage.qml" line="116"/>
+        <source>Error</source>
+        <translation>Errore</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ReleasesPage.qml" line="116"/>
+        <source>No releases</source>
+        <translation>Nessuna release</translation>
+    </message>
+</context>
+<context>
     <name>RepoDelegate</name>
     <message>
         <location filename="../qml/components/RepoDelegate.qml" line="70"/>
@@ -690,136 +926,222 @@
 <context>
     <name>RepoPage</name>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="77"/>
+        <location filename="../qml/pages/RepoPage.qml" line="113"/>
         <source>Change failed: you need admin rights and the &apos;repo&apos; scope.</source>
         <translation>Modifica fallita: servono i diritti di admin e lo scope &apos;repo&apos;.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="88"/>
+        <location filename="../qml/pages/RepoPage.qml" line="124"/>
         <source>Delete failed: the token needs the &apos;delete_repo&apos; scope.</source>
         <translation>Eliminazione fallita: il token richiede lo scope &apos;delete_repo&apos;.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="102"/>
+        <location filename="../qml/pages/RepoPage.qml" line="137"/>
         <source>Open on GitHub</source>
         <translation>Apri su GitHub</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="103"/>
+        <location filename="../qml/pages/RepoPage.qml" line="138"/>
+        <source>Copy clone URL</source>
+        <translation>Copia URL di clone</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RepoPage.qml" line="139"/>
         <source>Unwatch</source>
         <translation>Non seguire</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="103"/>
-        <location filename="../qml/pages/RepoPage.qml" line="162"/>
+        <location filename="../qml/pages/RepoPage.qml" line="139"/>
+        <location filename="../qml/pages/RepoPage.qml" line="324"/>
         <source>Watch</source>
         <translation>Segui</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="104"/>
-        <location filename="../qml/pages/RepoPage.qml" line="155"/>
+        <location filename="../qml/pages/RepoPage.qml" line="140"/>
+        <location filename="../qml/pages/RepoPage.qml" line="317"/>
         <source>Unstar</source>
         <translation>Rimuovi stella</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="104"/>
-        <location filename="../qml/pages/RepoPage.qml" line="155"/>
+        <location filename="../qml/pages/RepoPage.qml" line="140"/>
+        <location filename="../qml/pages/RepoPage.qml" line="317"/>
         <source>Star</source>
         <translation>Aggiungi stella</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="107"/>
-        <location filename="../qml/pages/RepoPage.qml" line="186"/>
+        <location filename="../qml/pages/RepoPage.qml" line="184"/>
+        <source>forked from %1</source>
+        <translation>fork di %1</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RepoPage.qml" line="202"/>
+        <source>Archived</source>
+        <translation>Archiviato</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RepoPage.qml" line="203"/>
+        <source>Template</source>
+        <translation>Template</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RepoPage.qml" line="206"/>
+        <source>Fork</source>
+        <translation>Fork</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RepoPage.qml" line="257"/>
+        <source>stars</source>
+        <translation>stelle</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RepoPage.qml" line="264"/>
+        <source>forks</source>
+        <translation>fork</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RepoPage.qml" line="270"/>
+        <source>watching</source>
+        <translation>osservatori</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RepoPage.qml" line="277"/>
+        <source>open issues</source>
+        <translation>issue aperte</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RepoPage.qml" line="306"/>
+        <source>Updated %1</source>
+        <translation>Aggiornato %1</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RepoPage.qml" line="346"/>
+        <source>Swipe left to read it</source>
+        <translation>Scorri a sinistra per leggerlo</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RepoPage.qml" line="358"/>
+        <source>Releases</source>
+        <translation>Release</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RepoPage.qml" line="360"/>
+        <source>Latest: %1, %2</source>
+        <translation>Ultima: %1, %2</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RepoPage.qml" line="362"/>
+        <source>No releases published</source>
+        <translation>Nessuna release pubblicata</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RepoPage.qml" line="381"/>
+        <source>Commits</source>
+        <translation>Commit</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RepoPage.qml" line="382"/>
+        <source>History of %1</source>
+        <translation>Cronologia di %1</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RepoPage.qml" line="387"/>
+        <source>Branches</source>
+        <translation>Branch</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RepoPage.qml" line="392"/>
+        <source>Tags</source>
+        <translation>Tag</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RepoPage.qml" line="397"/>
+        <source>Contributors</source>
+        <translation>Contributori</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/RepoPage.qml" line="409"/>
         <source>Make public</source>
         <translation>Rendi pubblico</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="107"/>
-        <location filename="../qml/pages/RepoPage.qml" line="186"/>
+        <location filename="../qml/pages/RepoPage.qml" line="409"/>
         <source>Make private</source>
         <translation>Rendi privato</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="111"/>
+        <location filename="../qml/pages/RepoPage.qml" line="141"/>
         <source>Refresh</source>
         <translation>Aggiorna</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="141"/>
+        <location filename="../qml/pages/RepoPage.qml" line="199"/>
         <source>Private</source>
         <translation>Privato</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="141"/>
+        <location filename="../qml/pages/RepoPage.qml" line="199"/>
         <source>Public</source>
         <translation>Pubblico</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="162"/>
+        <location filename="../qml/pages/RepoPage.qml" line="324"/>
         <source>Watching</source>
         <translation>Seguito</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="181"/>
+        <location filename="../qml/pages/RepoPage.qml" line="404"/>
         <source>Manage</source>
         <translation>Gestione</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="194"/>
+        <location filename="../qml/pages/RepoPage.qml" line="417"/>
         <source>Delete repository</source>
         <translation>Elimina repository</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="197"/>
+        <location filename="../qml/pages/RepoPage.qml" line="420"/>
         <source>Deleting repository</source>
         <translation>Eliminazione repository</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="202"/>
+        <location filename="../qml/pages/RepoPage.qml" line="352"/>
         <source>Code</source>
         <translation>Codice</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="203"/>
+        <location filename="../qml/pages/RepoPage.qml" line="353"/>
         <source>Browse the %1 branch</source>
         <translation>Sfoglia il branch %1</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="203"/>
+        <location filename="../qml/pages/RepoPage.qml" line="353"/>
         <source>Browse files</source>
         <translation>Sfoglia i file</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="208"/>
-        <location filename="../qml/pages/RepoPage.qml" line="211"/>
+        <location filename="../qml/pages/RepoPage.qml" line="279"/>
+        <location filename="../qml/pages/RepoPage.qml" line="366"/>
+        <location filename="../qml/pages/RepoPage.qml" line="372"/>
         <source>Issues</source>
         <translation>Issue</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="209"/>
+        <location filename="../qml/pages/RepoPage.qml" line="368"/>
+        <location filename="../qml/pages/RepoPage.qml" line="376"/>
         <source>%1 open</source>
         <translation>%1 aperte</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="214"/>
-        <location filename="../qml/pages/RepoPage.qml" line="216"/>
+        <location filename="../qml/pages/RepoPage.qml" line="375"/>
+        <location filename="../qml/pages/RepoPage.qml" line="378"/>
         <source>Pull requests</source>
         <translation>Pull request</translation>
     </message>
     <message>
-        <location filename="../qml/pages/RepoPage.qml" line="219"/>
-        <source>Owner</source>
-        <translation>Proprietario</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/RepoPage.qml" line="224"/>
+        <location filename="../qml/pages/RepoPage.qml" line="47"/>
+        <location filename="../qml/pages/RepoPage.qml" line="345"/>
         <source>README</source>
         <translation>README</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/RepoPage.qml" line="239"/>
-        <source>No README</source>
-        <translation>Nessun README</translation>
     </message>
 </context>
 <context>
@@ -1017,6 +1339,24 @@
         <location filename="../qml/pages/UserPage.qml" line="127"/>
         <source>%1 public</source>
         <translation>%1 pubblici</translation>
+    </message>
+</context>
+<context>
+    <name>harbour-roothub</name>
+    <message>
+        <location filename="../qml/harbour-roothub.qml" line="32"/>
+        <source>Download complete</source>
+        <translation>Download completato</translation>
+    </message>
+    <message>
+        <location filename="../qml/harbour-roothub.qml" line="33"/>
+        <source>%1 saved to Downloads</source>
+        <translation>%1 salvato in Download</translation>
+    </message>
+    <message>
+        <location filename="../qml/harbour-roothub.qml" line="40"/>
+        <source>Download failed</source>
+        <translation>Download non riuscito</translation>
     </message>
 </context>
 </TS>
